@@ -34,6 +34,21 @@ export class ImageBlock extends Block {
   }
 }
 
+export class ImageTextBlock extends Block {
+  constructor(value, options) {
+    super(value, options);
+  }
+
+  toHTML() {
+    const {alt, text, styles, imageStyles, textStyles} = this.options;
+    const html = `
+      <img src="${this.value}" alt="${alt}" style="${imageStyles}"/> 
+      <p style="${textStyles}">${text}</p>
+    `;
+    return row(html, styles);
+  }
+}
+
 export class TextBlock extends Block {
   constructor(value, options) {
     super(value, options);

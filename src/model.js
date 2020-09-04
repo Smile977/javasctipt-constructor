@@ -1,5 +1,5 @@
 import image from './assets/image.png';
-import {TitleBlock, ImageBlock, TextBlock, TextColumnBlock} from './classes/blocks';
+import {TitleBlock, ImageBlock, TextBlock, TextColumnBlock, ImageTextBlock} from './classes/blocks';
 
 const text = `
 Крутые видео и уроки по JavaScript тут: <a href="https://youtube.com/c/VladilenMinin" target="_blank">Владилен Минин</a>. Тут ты найдешь исчерпывающую информацию по любым аспектам языка, любым фреймворкам, такие как: React, Vue, Angular, Node, Svelte, Express, Next, Nuxt и многое другое. Присоединяйся!
@@ -21,6 +21,13 @@ export const model = [
     'JavaScript - это просто, интересно. Научись создавать любые UI своими руками'
   ], {
     styles: 'padding: 2rem 0; color: #fff; background: linear-gradient(to bottom, #8e2de2, #4a00e0); font-weight: bold;'
+  }),
+  new ImageTextBlock( image, {
+    styles: 'padding: 1rem; display: flex; justify-content: space-around; flex-flow: nowrap;align-items: center;',
+    alt: 'my image',
+    imageStyles: 'width: 500px; height: auto; margin-right: 1rem;',
+    text: text,
+    textStyles: 'box-sizing: border-box;margin: 0; background: linear-gradient(to right, #ff0099, #493240);color: #fff;padding: 1rem;text-align: center;font-weight: bold;font-size: 1.3rem;border-radius: .5rem;'
   }),
   new TextBlock(text, {
     styles: 'background: linear-gradient(to left, #f2994a, #f2c94c);font-weight: bold;padding: 1rem;'
