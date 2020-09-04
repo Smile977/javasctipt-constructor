@@ -6,12 +6,14 @@ function title(block) {
 }
 
 function text(block) {
-  return row(col(`<p>${block.value}</p>`), block.options.styles);
+  return row(col(`<p style="margin-bottom: 0">${block.value}</p>`), block.options.styles);
 }
 
-function img(block) {
-  const {alt, styles} = block.options;
-  return row(col(`<img src="${block.value}" alt="${alt}"/>`), styles);
+function image(block) {
+  console.log(block.value);
+  const {alt, styles, imageStyles} = block.options;
+  const html = `<img src="${block.value}" alt="${alt}" style="${imageStyles}"/>`;
+  return row(html, styles);
 }
 
 function textColumn(block) {
@@ -19,4 +21,4 @@ function textColumn(block) {
   return row(html.join(''), block.options.styles);
 }
 
-export const templates = {title, text, img, textColumn};
+export const templates = {title, text, image, textColumn};
