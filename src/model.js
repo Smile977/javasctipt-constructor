@@ -11,10 +11,18 @@ export const model = [
     }
   },
   {
+    type: 'img', value: 'https://i2.wp.com/lexusredesign.com/wp-content/uploads/2020/04/2021-Lexus-RX-350-Exterior-1.jpg?ssl=1', options: {
+      styles: 'width: 600px; height: 400px; margin: 0 auto;',
+      alt: 'lexus RX'
+    }
+
+  },
+  {
     type: 'textColumn', value: [
       '1 text',
       '2 text',
       '3 text',
+      '4 text',
     ], options: {
       styles: 'padding: 1rem; background: #ccc;'
     }

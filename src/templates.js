@@ -9,9 +9,14 @@ function text(block) {
   return row(col(`<p>${block.value}</p>`), block.options.styles);
 }
 
+function img(block) {
+  const {alt, styles} = block.options;
+  return row(col(`<img src="${block.value}" alt="${alt}"/>`), styles);
+}
+
 function textColumn(block) {
   const html = block.value.map((item) => col(item));
   return row(html.join(''), block.options.styles);
 }
 
-export const templates = {title, text, textColumn};
+export const templates = {title, text, img, textColumn};
