@@ -10,7 +10,6 @@ function text(block) {
 }
 
 function image(block) {
-  console.log(block.value);
   const {alt, styles, imageStyles} = block.options;
   const html = `<img src="${block.value}" alt="${alt}" style="${imageStyles}"/>`;
   return row(html, styles);
